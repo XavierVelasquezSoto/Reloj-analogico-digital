@@ -6,7 +6,7 @@ const printClockDigital = () => {
   hourDigitalElement.textContent = `${date.getHours()}`;
   minuteDigitalElement.textContent = `${date.getMinutes()}`;
 };
-setInterval(printClockDigital);
+// setInterval(printClockDigital);
 
 const dayOfWeekElement = document.getElementById("day-of-week");
 const dayElement = document.getElementById("day");
@@ -47,7 +47,7 @@ const printClockDigitalDate = () => {
   yearElement.textContent = `${date.getFullYear()}`;
 };
 
-setInterval(printClockDigitalDate);
+// setInterval(printClockDigitalDate);
 
 const hourHandElement = document.getElementById("hour-hand");
 const minuteHandElement = document.getElementById("minute-hand");
@@ -69,4 +69,10 @@ const printClockAnalog = () => {
   secondHandElement.style.transform = `rotate(${secondRotation}deg)`;
 };
 
-setInterval(printClockAnalog);
+// setInterval(printClockAnalog);
+
+setInterval(() => {
+  printClockDigital();
+  printClockDigitalDate();
+  printClockAnalog();
+});
