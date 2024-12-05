@@ -48,3 +48,25 @@ const printClockDigitalDate = () => {
 };
 
 setInterval(printClockDigitalDate);
+
+const hourHandElement = document.getElementById("hour-hand");
+const minuteHandElement = document.getElementById("minute-hand");
+const secondHandElement = document.getElementById("second-hand");
+
+const printClockAnalog = () => {
+  const date = new Date();
+
+  const hour = date.getHours();
+  const hourRotation = hour * 30;
+  hourHandElement.style.transform = `rotate(${hourRotation}deg)`;
+
+  const minute = date.getMinutes();
+  const minuteRotation = minute * 6;
+  minuteHandElement.style.transform = `rotate(${minuteRotation}deg)`;
+
+  const seconds = date.getSeconds();
+  const secondRotation = seconds * 6;
+  secondHandElement.style.transform = `rotate(${secondRotation}deg)`;
+};
+
+setInterval(printClockAnalog);
