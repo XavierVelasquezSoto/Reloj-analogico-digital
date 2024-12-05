@@ -34,8 +34,8 @@ body {
   --body--color: #111;
   --text-color: #fff;
   --second-color: #872222;
-  --minute-color: #1b1b7e;
-  --hour-color: #121111a7;
+  --minute-color: #15908e;
+  --hour-color: #570c6aa7;
   --size--xl: 110px;
   --size-l: 90px;
   --size-m: 70px;
@@ -69,35 +69,46 @@ body {
   height: 500px;
 }
 
-.hour-hand {
+.hand {
   position: absolute;
-  width: 10px;
+  width: 13px;
   height: 135px;
+  left: calc(50% - 5px);
+  top: calc(25% - 5px);
+  transform-origin: bottom;
+  transform: rotate(0deg);
+}
+
+.hand::after {
+  content: "";
+  position: absolute;
+  background-color: #264c92;
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  top: -10px;
+  left: -5px;
+}
+
+.point {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #111;
+  left: calc(50% - 15px);
+  top: calc(50% - 15px);
+  z-index: 100;
+  border-radius: 50%;
+}
+
+.hour-color {
   background-color: var(--hour-color);
-  left: calc(50% - 5px);
-  top: calc(25% - 5px);
-  transform-origin: bottom;
-  transform: rotate(0deg);
 }
-.minute-hand {
-  position: absolute;
-  width: 10px;
-  height: 135px;
+.minute-color {
   background-color: var(--minute-color);
-  left: calc(50% - 5px);
-  top: calc(25% - 5px);
-  transform-origin: bottom;
-  transform: rotate(0deg);
 }
-.second-hand {
-  position: absolute;
-  width: 10px;
-  height: 135px;
+.second-color {
   background-color: var(--second-color);
-  left: calc(50% - 5px);
-  top: calc(25% - 5px);
-  transform-origin: bottom;
-  transform: rotate(0deg);
 }
 
 /* cada 30deg son 5min */

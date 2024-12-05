@@ -57,15 +57,15 @@ const printClockAnalog = () => {
   const date = new Date();
 
   const hour = date.getHours();
-  const hourRotation = hour * 30;
-  hourHandElement.style.transform = `rotate(${hourRotation}deg)`;
-
   const minute = date.getMinutes();
-  const minuteRotation = minute * 6;
-  minuteHandElement.style.transform = `rotate(${minuteRotation}deg)`;
-
   const seconds = date.getSeconds();
+
+  const hourRotation = hour * 30 + minute * 0.5;
+  const minuteRotation = minute * 6;
   const secondRotation = seconds * 6;
+
+  hourHandElement.style.transform = `rotate(${hourRotation}deg)`;
+  minuteHandElement.style.transform = `rotate(${minuteRotation}deg)`;
   secondHandElement.style.transform = `rotate(${secondRotation}deg)`;
 };
 
