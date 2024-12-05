@@ -3,8 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <div class="digital">
+        <div class="time">
+          <span class="hour-digital" id="hour-digital">00</span>
+          <span class="colon">:</span>
+          <span class="minute-digital" id="minute-digital">00</span>
+        </div>
+        <div class="date">
+          <span id="day-of-week">DAY</span>
+          <span id="day">0</span>
+          <span id="month">MONTH</span>
+          <span id="year">0000</span>
+        </div>
+      </div>
+      <div class="analog"></div>
+    </main>
+    <script src="./js/scripts.js"></script>
+  </body>
 </html>

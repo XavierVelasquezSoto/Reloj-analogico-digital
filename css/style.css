@@ -26,4 +26,45 @@ ul {
 body {
   margin: 0;
   font-family: sans-serif;
+  background-color: var(--body--color);
+  color: var(--text-color);
+}
+
+:root {
+  --body--color: #111;
+  --text-color: #fff;
+  --size--xl: 110px;
+  --size-l: 90px;
+  --size-m: 70px;
+  --size-s: 50px;
+}
+
+.digital {
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+}
+
+.time {
+  font-size: var(--size--xl);
+}
+
+.hour {
+}
+
+.colon {
+  font-size: var(--size-l);
+}
+
+.minute {
+}
+
+.date {
+  font-size: var(--size-s);
+}
+
+.analog {
+  background-image: url(../assets/img/clock.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 500px;
 }
