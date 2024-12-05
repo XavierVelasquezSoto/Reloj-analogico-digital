@@ -3,8 +3,18 @@ const minuteDigitalElement = document.getElementById("minute-digital");
 
 const printClockDigital = () => {
   const date = new Date();
-  hourDigitalElement.textContent = `${date.getHours()}`;
-  minuteDigitalElement.textContent = `${date.getMinutes()}`;
+  let hour = date.getHours();
+  let minute = date.getMinutes();
+
+  if (hour < 10) {
+    hour = "0" + hour;
+  }
+  if (minute < 10) {
+    minute = "0" + minute;
+  }
+
+  hourDigitalElement.textContent = `${hour}`;
+  minuteDigitalElement.textContent = `${minute}`;
 };
 // setInterval(printClockDigital);
 
